@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/*
+Création d'une classe personnalisée pour la hauteur de la section
+*/
+
+@layer utilities {
+    .section-min-height {
+        min-height: calc(100vh - 68px)
+    }
+    .toggle-btn {
+        @apply [&>div::before]:translate-y-0 [&>div::before]:rotate-45 [&>div::after]:translate-y-0 [&>div::after]:-rotate-45 [&>div]:bg-transparent [&>div]:rotate-[720deg]
+    }
+/*
+Permet de créer une classe a apliquer à l'élément parent pour pouvoir cibler les éléments enfants. Il s'agit d'animer le bouton hamburger en un X pour le menu responsive.
+*/
+}
